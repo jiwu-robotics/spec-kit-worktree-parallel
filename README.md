@@ -22,7 +22,7 @@ No release archive is currently published for this repository. Install from a
 local checkout instead. From the root of the target Spec Kit project:
 
 ```bash
-git clone --branch main --single-branch \
+git clone --branch develop --single-branch \
   git@github.com:jiwu-robotics/spec-kit-worktree-parallel.git \
   ../spec-kit-worktree-parallel
 specify extension add ../spec-kit-worktree-parallel --dev
