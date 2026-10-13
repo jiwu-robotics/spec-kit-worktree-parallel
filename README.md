@@ -18,9 +18,20 @@ This extension **does not** change another extension’s configuration on instal
 
 ## Installation
 
+No release archive is currently published for this repository. Install from a
+local checkout instead. From the root of the target Spec Kit project:
+
 ```bash
-specify extension add worktrees --from https://github.com/dango85/spec-kit-worktree-parallel/archive/refs/tags/v1.3.2.zip
+git clone --branch develop --single-branch \
+  git@github.com:jiwu-robotics/spec-kit-worktree-parallel.git \
+  ../spec-kit-worktree-parallel
+specify extension add ../spec-kit-worktree-parallel --dev
+bash .specify/extensions/worktrees/scripts/bash/post-install.sh
+specify extension list
 ```
+
+The explicit `post-install.sh` step adds the configured worktree directory
+(`.worktrees/` by default) to the target project's `.gitignore`.
 
 ## Cursor IDE: best results with Spec Kit
 
